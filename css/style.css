@@ -1,7 +1,39 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+@font-face {
+	font-family: 'Open Sans';
+	src: url('OpenSans-Bold.eot');
+	src: local('Open Sans Bold'), local('OpenSans-Bold'),
+		url('OpenSans-Bold.eot?#iefix') format('embedded-opentype'),
+		url('OpenSans-Bold.woff') format('woff'),
+		url('OpenSans-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'Open Sans';
+	src: url('OpenSans-Regular.eot');
+	src: local('Open Sans Regular'), local('OpenSans-Regular'),
+		url('OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
+		url('OpenSans-Regular.woff') format('woff'),
+		url('OpenSans-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Open Sans';
+	src: url('OpenSans-SemiBold.eot');
+	src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'),
+		url('OpenSans-SemiBold.eot?#iefix') format('embedded-opentype'),
+		url('OpenSans-SemiBold.woff') format('woff'),
+		url('OpenSans-SemiBold.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
+}
+
 html {
   box-sizing: border-box;
-  background: var(--white);
 }
 *,
 *::before,
@@ -10,25 +42,17 @@ html {
 }
 body {
   font-family: "Open sans", Arial, Helvetica, sans-serif;
+  background: var(--white);
 }
-h1,
-h2,
-h3,
-h4 {
-  margin: 0;
+ul{
   padding: 0;
+  margin: 0;
 }
-ul {
+p{
   margin: 0;
-  padding: 0;
-}
-p {
-  margin: 0;
-  padding: 0;
 }
 li {
   list-style-type: none;
-  margin: 0;
   padding: 0;
 }
 button {
@@ -76,6 +100,10 @@ svg {
   --bright-gray-more: #cacaca;
   --white: #fff;
 }
+.visually-hidden{
+  position: fixed;
+  transform: scale(0);
+}
 .hidden {
   display: none;
 }
@@ -83,11 +111,13 @@ svg {
   display: flex;
 }
 .container {
-  max-width: 1600px;
+  max-width: 1700px;
   margin: 0 auto;
+  padding: 0 50px;
 }
 .header {
   background-color: var(--black);
+  padding: 27px 0 30px 0;
 }
 .header__nav {
   align-content: center;
@@ -98,9 +128,6 @@ svg {
   align-content: center;
   flex-wrap: wrap;
   position: relative;
-}
-.header__container {
-  padding: 27px 0 30px 0;
 }
 .header__container-svg {
   width: 173px;
@@ -119,12 +146,12 @@ svg {
   color: var(--white);
   transition: color 0.3s linear;
 }
-.header__menu__content-link:focus {
+.header__menu__content-link:focus-visible {
   background-color: var(--dark-purple);
   outline: solid 6px var(--dark-purple);
   outline-offset: -1px;
 }
-.header__menu__content-link:hover {
+.header__menu__content-link:hover:not(:focus-visible) {
   color: var(--dark-pink);
 }
 .header__menu__content-link:active {
@@ -136,11 +163,11 @@ svg {
   transition: fill 0.3s linear;
   fill: var(--white);
 }
-.header__menu-search:focus .header__menu-search-svg {
+.header__menu-search:focus-visible .header__menu-search-svg {
   background-color: var(--dark-purple);
   outline: solid 4px var(--dark-purple);
 }
-.header__menu-search-svg:hover {
+.header__menu-search-svg:hover:not(:focus-visible){
   fill: var(--dark-pink);
 }
 .header__menu-search-svg:active {
@@ -151,6 +178,7 @@ svg {
   margin-bottom: 84px;
   padding: 144px 0 145px 0;
   background-image: url(../img/hero-back.png);
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -185,11 +213,11 @@ svg {
   font-weight: 700;
   transition: background-color 0.3s linear, border 0.3s ease-in;
 }
-.hero__container-btn:focus {
+.hero__container-btn:focus-visible {
   outline: 2px solid var(--dark-pink);
   outline-offset: 3px;
 }
-.hero__container-btn:hover {
+.hero__container-btn:hover:not(:focus-visible) {
   border: 3px solid var(--pink);
 }
 .hero__container-btn:active {
@@ -212,6 +240,7 @@ svg {
 }
 .gallery {
   background-image: url(../img/gallery-back.png);
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   padding: 78px 0 86px 0;
@@ -366,11 +395,12 @@ svg {
   border: 1px solid var(--bright-gray-more);
   height: 400px;
 }
+.event__cards{
+  gap: 50px;
+  flex-wrap: wrap;
+}
 .event__cards-card {
   max-width: 500px;
-}
-.event__cards-card:not(:last-child) {
-  margin-right: 50px;
 }
 .event__cards-card__location {
   display: block;
@@ -403,13 +433,13 @@ svg {
   text-underline-offset: 7px;
   transition: color 0.3s linear, text-decoration-color 0.3s linear;
 }
-.event__cards-card__link:focus {
+.event__cards-card__link:focus-visible {
   outline: 5px solid var(--dark-purple);
   outline-offset: -1px;
   color: var(--white);
   text-decoration-color: var(--white);
 }
-.event__cards-card__link:focus::after {
+.event__cards-card__link:focus-visible::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -419,7 +449,7 @@ svg {
   background-color: var(--dark-purple);
   z-index: -1;
 }
-.event__cards-card__link:hover {
+.event__cards-card__link:hover:not(:focus-visible) {
   color: var(--dark-purple);
   text-decoration-color: var(--dark-purple);
 }
@@ -462,10 +492,10 @@ svg {
   margin-bottom: 78px;
 }
 .contact {
+  padding: 38px 0 40px 0;
   border-top: 1px solid var(--bright-gray-more);
 }
 .contact__container {
-  padding: 38px 0 40px 0;
   justify-content: space-between;
 }
 .contact__container-block {
@@ -535,6 +565,9 @@ svg {
   stroke: var(--purple);
   stroke-width: 1.5px;
 }
+.contact__form-button::before{
+  content: "Заказать обратный звонок";
+}
 .contact__form-button {
   padding: 13px 35px;
   border-radius: 100px;
@@ -548,11 +581,11 @@ svg {
   transition: background-color 0.3s linear, border 0.3s linear,
     color 0.3s linear;
 }
-.contact__form-button:focus {
+.contact__form-button:focus-visible {
   outline: 2px solid var(--dark-pink);
   outline-offset: 3px;
 }
-.contact__form-button:hover {
+.contact__form-button:hover:not(:focus-visible) {
   background-color: var(--purple);
   color: var(--white);
 }
