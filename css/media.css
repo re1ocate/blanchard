@@ -418,8 +418,10 @@
   .contact__form {
     margin-bottom: 23px;
   }
+
   .contact {
     margin-bottom: 46px;
+    padding: 0;
   }
   .catalog {
     margin-bottom: 50px;
