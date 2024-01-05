@@ -2,9 +2,7 @@
 	font-family: 'Open Sans';
 	src: url('OpenSans-Bold.eot');
 	src: local('Open Sans Bold'), local('OpenSans-Bold'),
-		url('OpenSans-Bold.eot?#iefix') format('embedded-opentype'),
-		url('OpenSans-Bold.woff') format('woff'),
-		url('OpenSans-Bold.ttf') format('truetype');
+		url('../fonts/OpenSansBold.woff2') format('woff2');
 	font-weight: bold;
 	font-style: normal;
 }
@@ -14,9 +12,7 @@
 	font-family: 'Open Sans';
 	src: url('OpenSans-Regular.eot');
 	src: local('Open Sans Regular'), local('OpenSans-Regular'),
-		url('OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
-		url('OpenSans-Regular.woff') format('woff'),
-		url('OpenSans-Regular.ttf') format('truetype');
+		url('../fonts/OpenSansRegular.woff2') format('woff2');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -25,9 +21,7 @@
 	font-family: 'Open Sans';
 	src: url('OpenSans-SemiBold.eot');
 	src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'),
-		url('OpenSans-SemiBold.eot?#iefix') format('embedded-opentype'),
-		url('OpenSans-SemiBold.woff') format('woff'),
-		url('OpenSans-SemiBold.ttf') format('truetype');
+		url('../fonts/OpenSansSemiBold.woff2') format('woff2');
 	font-weight: 600;
 	font-style: normal;
 }
@@ -120,10 +114,15 @@ svg {
   background-color: var(--black);
   padding: 27px 0 30px 0;
 }
+.header__nav::-webkit-scrollbar {
+  display: none;
+}
 .header__nav {
   align-content: center;
   flex-wrap: wrap;
   margin-right: 296px;
+  overflow-x: auto;
+  max-width: 930px;
 }
 .header__menu-search {
   align-content: center;
@@ -134,28 +133,28 @@ svg {
   width: 173px;
   height: 40px;
 }
-.header__menu__content:not(:last-child) {
+.header__menu-content:not(:last-child) {
   margin-right: 96px;
 }
 .header__container-link {
   margin-right: 179px;
 }
-.header__menu__content-link {
+.header__menu-content-link {
   white-space: nowrap;
   font-size: 18px;
   font-weight: 600;
   color: var(--white);
   transition: color 0.3s linear;
 }
-.header__menu__content-link:focus-visible {
+.header__menu-content-link:focus-visible {
   background-color: var(--dark-purple);
   outline: solid 6px var(--dark-purple);
   outline-offset: -1px;
 }
-.header__menu__content-link:hover:not(:focus-visible) {
+.header__menu-content-link:hover:not(:focus-visible) {
   color: var(--dark-pink);
 }
-.header__menu__content-link:active {
+.header__menu-content-link:active {
   color: var(--dark-purple);
 }
 .header__menu-search-svg {
@@ -362,22 +361,22 @@ svg {
 .catalog__cards-card:not(:last-child) {
   margin-bottom: 50px;
 }
-.catalog__cards-card__img {
+.catalog__cards-img {
   margin-right: 50px;
 }
-.catalog__cards-card__title {
+.catalog__cards-title {
   margin-bottom: 15px;
   font-size: 24px;
   font-weight: 600;
   color: var(--bright-black);
 }
-.catalog__cards-card__date {
+.catalog__cards-date {
   margin-bottom: 15px;
   font-size: 12px;
   font-weight: 400;
   color: var(--bright-gray);
 }
-.catalog__cards-card__text {
+.catalog__cards-text {
   font-size: 16px;
   font-weight: 400;
   line-height: 32px;
@@ -403,26 +402,26 @@ svg {
 .event__cards-card {
   max-width: 500px;
 }
-.event__cards-card__location {
+.event__cards-location {
   display: block;
   margin-bottom: 22px;
   color: var(--bright-gray);
   font-size: 12px;
   font-weight: 600;
 }
-.event__cards-card__title {
+.event__cards-title {
   margin-bottom: 10px;
   font-size: 24px;
   font-weight: 600;
   line-height: 31px;
 }
-.event__cards-card__text {
+.event__cards-text {
   font-size: 16px;
   font-weight: 400;
   line-height: 32px;
   color: var(--bright-black);
 }
-.event__cards-card__link {
+.event__cards-link {
   position: relative;
   max-width: 90px;
   max-height: 31px;
@@ -434,13 +433,13 @@ svg {
   text-underline-offset: 7px;
   transition: color 0.3s linear, text-decoration-color 0.3s linear;
 }
-.event__cards-card__link:focus-visible {
+.event__cards-link:focus-visible {
   outline: 5px solid var(--dark-purple);
   outline-offset: -1px;
   color: var(--white);
   text-decoration-color: var(--white);
 }
-.event__cards-card__link:focus-visible::after {
+.event__cards-link:focus-visible::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -450,15 +449,14 @@ svg {
   background-color: var(--dark-purple);
   z-index: -1;
 }
-.event__cards-card__link:hover:not(:focus-visible) {
+.event__cards-link:hover:not(:focus-visible) {
   color: var(--dark-purple);
   text-decoration-color: var(--dark-purple);
 }
-.event__cards-card__link:active {
+.event__cards-link:active {
   color: var(--bright-black);
   text-decoration-color: var(--bright-black);
 }
-
 .event {
   margin-bottom: 85px;
 }
