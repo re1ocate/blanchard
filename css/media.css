@@ -7,7 +7,6 @@
     justify-content: space-between;
   }
   .header__container-link {
-
     margin-right: 0;
   }
   .event__cards-card {
@@ -20,11 +19,11 @@
   .event__cards-title {
     margin-bottom: 11px;
   }
-  .project__link:first-of-type {
-    margin-right: 23px;
+  .project__container{
+    gap: 23px;
   }
   .project {
-    margin-bottom: 80px;
+    padding-bottom: 80px;
   }
   .project__link {
     padding: 26px;
@@ -42,9 +41,6 @@
   .header__nav {
     margin-right: 0;
   }
-  .header__container-link {
-    /* margin-bottom: 24px; */
-  }
   .hero__container-title {
     margin-bottom: 20px;
   }
@@ -53,7 +49,6 @@
   }
   .hero {
     padding: 101px 0 68px 0;
-    /* background-image: url(../img/hero-back-1024.png); */
     background-size: cover;
     height: 621px;
   }
@@ -62,7 +57,7 @@
     max-width: none;
   }
   .about-us {
-    margin-bottom: 71px;
+    padding-bottom: 71px;
   }
   .about-us__text {
     max-width: 925px;
@@ -72,7 +67,7 @@
     flex-wrap: wrap;
   }
   .gallery {
-    margin-bottom: 85px;
+    /* margin-bottom: 85px; */
     background-image: url(../img/gallery-back-1024.png);
     background-size: cover;
     padding: 85px 0 85px 0;
@@ -163,7 +158,20 @@
   }
   .header__menu-content:not(:last-child){
     margin-right: 80px;
-
+  }
+  .header__menu{
+    flex-wrap: nowrap;
+  }
+  .contact__form-input{
+    margin-bottom: 12px;
+    width: 323px;
+  }
+  .contact__form-button{
+    width: 317px;
+    padding: 13px 26px;
+  }
+  .border{
+    max-width: 668px;
   }
 
 }
@@ -180,11 +188,11 @@
   .header__menu-content:not(:last-child) {
     margin-right: 44px;
   }
-  .gallery__picture:not(:last-child) {
-    margin-right: 34px;
+  .gallery__pictures {
+    gap: 34px;
   }
-  .project__link:first-of-type {
-    margin-right: 31px;
+  .project__container {
+    gap: 31px;
   }
   .contact__form-input {
     width: 323px;
@@ -199,9 +207,6 @@
   }
 }
 @media (max-width: 768px) {
-  .container {
-    /* max-width: 668px; */
-  }
   .project__link {
     max-width: 316px;
   }
@@ -240,7 +245,7 @@
     margin-bottom: 29px;
   }
   .project {
-    margin-bottom: 83px;
+    padding-bottom: 83px;
   }
   .contact__form-input {
     padding-left: 24px;
@@ -249,7 +254,10 @@
 @media (max-width: 690px) {
   .hero {
     padding: 91px 0;
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
+  }
+  .about-us{
+    padding-top: 50px;
   }
   .hero__container {
     text-align: center;
@@ -271,22 +279,14 @@
   .gallery {
     padding: 50px 0;
   }
-  .gallery__picture:not(:last-child) {
-    margin-right: 0;
-    margin-bottom: 30px;
+  .gallery__pictures {
+    gap: 30px;
   }
-  .gallery__picture:not(:last-child) .gallery__picture-img {
-    margin-bottom: 30px;
-  }
-  .project__link:first-of-type {
-    margin-right: 0;
-    margin-bottom: 12px;
+  .project__container {
+    gap: 12px;
   }
   .project__link {
     padding: 30px 64px;
-  }
-  .contact__form-button::before{
-    content: "Заказать";
   }
 }
 @media (max-width: 520px) {
@@ -317,7 +317,7 @@
   .hero {
     padding: 50px 0;
     height: auto;
-    margin-bottom: 53px;
+    /* margin-bottom: 53px; */
   }
   .hero__container-title{
     font-size: 32px;
@@ -344,12 +344,17 @@
     line-height: 28px;
   }
   .about-us {
-    margin-bottom: 41px;
+    padding: 53px 0 41px 0;
   }
+
   .gallery {
     padding: 53px 0 51px 0;
-    margin-bottom: 53px;
+    /* margin-bottom: 53px; */
     background-image: url(../img/gallery-back-320.png);
+  }
+  .gallery__pictures{
+    flex-wrap: wrap;
+    justify-content: center;
   }
   .gallery__title {
     margin-bottom: 22px;
@@ -376,7 +381,8 @@
     max-height: 483px;
   }
   .event {
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
+    padding-bottom: 45px;
   }
   .project__text {
     margin-bottom: 20px;
@@ -385,7 +391,8 @@
     margin-bottom: 11px;
   }
   .project {
-    margin-bottom: 50px;
+    padding-bottom: 50px;
+    /* margin-bottom: 50px; */
   }
   .contact {
     border: none;
@@ -399,19 +406,24 @@
   .contact__form-input {
     width: 290px;
   }
+  .contact__form-button-text{
+    display: none;
+  }
+  .contact__form-button-text-hidden{
+    display: block;
+  }
   form {
     max-width: 290px;
   }
   .contact__form {
     margin-bottom: 23px;
   }
-
   .contact {
-    margin-bottom: 46px;
     padding: 0;
+    padding-bottom: 46px;
   }
   .catalog {
-    margin-bottom: 50px;
+    padding: 53px 0 50px 0;
   }
   .event__title {
     margin-bottom: 15px;
@@ -458,9 +470,6 @@
     padding: 10px 30px;
     width: auto;
     font-size: 12px;
-  }
-  .project {
-    margin-bottom: 45px;
   }
   .footer {
     padding: 20px 0;

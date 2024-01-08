@@ -121,15 +121,14 @@ svg {
   background-color: var(--black);
   padding: 27px 0 30px 0;
 }
-.header__nav::-webkit-scrollbar {
-  display: none;
-}
 .header__nav {
   align-content: center;
   flex-wrap: wrap;
   margin-right: 296px;
-  overflow-x: auto;
-  max-width: 930px;
+}
+.header__menu{
+  max-width: 950px;
+  flex-wrap: wrap;
 }
 .header__menu-search {
   align-content: center;
@@ -180,10 +179,9 @@ svg {
 .header__menu-search-svg:active {
   fill: var(--purple);
 }
-
 .hero {
-  margin-bottom: 84px;
   padding: 144px 0 145px 0;
+  background-color: #CAAA79;
   background-image: url(../img/hero-back.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -232,7 +230,8 @@ svg {
   background-color: var(--dark-purple);
 }
 .about-us {
-  margin-bottom: 70px;
+  padding: 84px 0 70px 0;
+  /* margin-bottom: 70px; */
 }
 .about-us__title {
   margin-bottom: 21px;
@@ -246,6 +245,7 @@ svg {
   color: var(--bright-black);
 }
 .gallery {
+  background-color: #2C2C2C;
   background-image: url(../img/gallery-back.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -256,8 +256,11 @@ svg {
   margin-bottom: 30px;
   color: var(--white);
 }
+.gallery__pictures{
+  gap: 49px;
+}
 .gallery__picture:not(:last-child) {
-  margin-right: 49px;
+  /* margin-right: 49px; */
 }
 
 /* Customize the label (the container) */
@@ -342,9 +345,6 @@ svg {
   align-items: flex-end;
   justify-content: space-between;
 }
-.gallery {
-  margin-bottom: 82px;
-}
 .title {
   font-size: 48px;
   font-weight: 400;
@@ -389,7 +389,8 @@ svg {
   line-height: 32px;
 }
 .catalog {
-  margin-bottom: 84px;
+  padding: 82px 0 84px 0;
+  /* margin-bottom: 84px; */
 }
 .event__title {
   margin-bottom: 21px;
@@ -465,7 +466,8 @@ svg {
   text-decoration-color: var(--bright-black);
 }
 .event {
-  margin-bottom: 85px;
+  padding-bottom: 85px;
+  /* margin-bottom: 85px; */
 }
 .project__title {
   margin-bottom: 21px;
@@ -486,16 +488,21 @@ svg {
   font-weight: 600;
   line-height: 32px;
 }
+.project__container {
+  gap: 30px;
+  flex-wrap: wrap;
+}
 .project__link {
   padding: 27px 26px;
   display: inline-block;
   border: 1px solid var(--bright-gray-more);
 }
-.project__link:first-of-type {
+/* .project__link:first-of-type {
   margin-right: 30px;
-}
+} */
 .project {
-  margin-bottom: 78px;
+  padding-bottom: 70px;
+  /* margin-bottom: 78px; */
 }
 .contact {
   padding: 38px 0 40px 0;
@@ -571,9 +578,9 @@ svg {
   stroke: var(--purple);
   stroke-width: 1.5px;
 }
-.contact__form-button::before{
+/* .contact__form-button::before{
   content: "Заказать обратный звонок";
-}
+} */
 .contact__form-button {
   padding: 13px 35px;
   border-radius: 100px;
@@ -587,6 +594,7 @@ svg {
   transition: background-color 0.3s linear, border 0.3s linear,
     color 0.3s linear;
 }
+
 .contact__form-button:focus-visible {
   outline: 2px solid var(--dark-pink);
   outline-offset: 3px;
@@ -599,8 +607,12 @@ svg {
   border: 3px solid var(--pink);
   color: var(--white);
 }
-.contact__link:first-of-type {
-  margin-right: 16px; /* margin fix -4px*/
+.contact__form-button-text-hidden{
+  display: none;
+}
+.contact__container-links{
+  gap: 16px;
+  flex-wrap: wrap;
 }
 .footer {
   background-color: var(--black);
@@ -613,9 +625,13 @@ svg {
   width: 173px;
   height: 40px;
 }
-.footer__container-link:first-child {
-  margin-right: 16px;
+.footer__container-links {
+  gap: 16px;
+  flex-wrap: wrap;
 }
+/* .footer__container-link:first-child {
+  margin-right: 16px;
+} */
 .footer__container-svg {
   fill: var(--bright-gray-more);
   transition: fill 0.3s linear;
