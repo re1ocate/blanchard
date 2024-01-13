@@ -35,7 +35,7 @@
     gap: 27px;
   }
   .border {
-    height: 483px;
+    min-height: 483px;
     padding: 14px 34px 49px 34px;
   }
   .header__nav {
@@ -68,7 +68,7 @@
   }
   .gallery {
     /* margin-bottom: 85px; */
-    background-image: url(../img/gallery-back-1024.png);
+    background-image: url(../img/gallery-back-1024.jpg);
     background-size: cover;
     padding: 85px 0 85px 0;
   }
@@ -122,7 +122,7 @@
     width: 270px;
   }
   .contact__form-button {
-    width: 340px;
+    /* width: 340px; */
   }
   .contact__form {
     margin-bottom: 30px;
@@ -164,18 +164,25 @@
   }
   .contact__form-input{
     margin-bottom: 12px;
-    width: 323px;
+    /* width: 323px; */
   }
   .contact__form-button{
-    width: 317px;
-    padding: 13px 26px;
+    /* width: 317px; */
+    padding: 13px 39px;
   }
   .border{
     max-width: 668px;
   }
+  .contact{
+    padding-top: 46px;
+    padding-bottom: 41px;
+  }
+  .contact__form {
+    margin-bottom: 19px;
+  }
 
 }
-@media (max-width: 930px) {
+@media (max-width: 1000px) {
   .event__cards-card {
     max-width: 700px;
   }
@@ -188,11 +195,21 @@
   .header__menu-content:not(:last-child) {
     margin-right: 44px;
   }
+  .gallery{
+    padding-bottom: 80px;
+  }
   .gallery__pictures {
-    gap: 34px;
+    gap: 50px;
+    width: 100%;
+  }
+  .catalog {
+    padding-top: 85px;
   }
   .project__container {
     gap: 31px;
+  }
+  .gallery__checkbox{
+    margin-bottom: 37px;
   }
   .contact__form-input {
     width: 323px;
@@ -202,7 +219,7 @@
     margin-right: 0;
   }
   .contact__form-button {
-    width: 317px;
+    /* width: 317px; */
     padding: 13px 26px;
   }
 }
@@ -224,7 +241,7 @@
     padding: 87px 0 82px 0;
   }
   .border{
-    max-height: 328px;
+    min-height: 328px;
   }
   .hero__container {
     max-width: 556px;
@@ -350,7 +367,7 @@
   .gallery {
     padding: 53px 0 51px 0;
     /* margin-bottom: 53px; */
-    background-image: url(../img/gallery-back-320.png);
+    background-image: url(../img/gallery-back-320.jpg);
   }
   .gallery__pictures{
     flex-wrap: wrap;
@@ -378,14 +395,18 @@
     max-width: 286px;
   }
   .border {
-    max-height: 483px;
+    min-height: 483px;
   }
   .event {
     /* margin-bottom: 50px; */
-    padding-bottom: 45px;
+    padding-bottom: 54px;
+  }
+  .project__title{
+    margin-bottom: 15px;
   }
   .project__text {
     margin-bottom: 20px;
+    max-width: 289px;
   }
   .project__subtitle {
     margin-bottom: 11px;
@@ -420,13 +441,16 @@
   }
   .contact {
     padding: 0;
-    padding-bottom: 46px;
+    padding-bottom: 57px;
   }
   .catalog {
     padding: 53px 0 50px 0;
   }
   .event__title {
     margin-bottom: 15px;
+  }
+  .event__cards{
+    gap: 19px;
   }
   .border {
     padding: 18px 13px 49px 22px;
@@ -435,13 +459,14 @@
     margin-bottom: 13px;
   }
   .event__cards-card:not(:last-child) {
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
   }
   .project__subtitle {
     font-size: 18px;
   }
   .project__text {
     margin-bottom: 17px;
+    /* font-size: 16px; */
   }
   .contact__link-svg {
     width: 50px;
@@ -468,7 +493,7 @@
   }
   .contact__form-button {
     padding: 10px 30px;
-    width: auto;
+    /* width: auto; */
     font-size: 12px;
   }
   .footer {
