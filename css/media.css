@@ -1,4 +1,7 @@
 @media (max-width: 1700px) {
+  img{
+    max-width: 100%;
+  }
   .header{
     padding: 35px 0 24px;
   }
@@ -137,9 +140,6 @@
   .footer {
     padding: 40px 0;
   }
-  img {
-    max-width: 100%;
-  }
 }
 @media (max-width: 1280px){
   .header__container-link{
@@ -182,7 +182,7 @@
   }
 
 }
-@media (max-width: 1000px) {
+@media (max-width: 1023px) {
   .event__cards-card {
     max-width: 700px;
   }
@@ -227,6 +227,12 @@
   .project__link {
     max-width: 316px;
   }
+  .contact{
+    padding: 43px 0 48px 0;
+  }
+  .about-us{
+    padding-bottom: 73px;
+  }
   .header__nav::-webkit-scrollbar {
     display: none;
   }
@@ -250,7 +256,7 @@
     margin-bottom: 35px;
   }
   .gallery {
-    padding-bottom: 80px;
+    padding-bottom: 91px;
   }
   .catalog__cards-date {
     margin-bottom: 7px;
@@ -307,6 +313,9 @@
   }
 }
 @media (max-width: 520px) {
+  .hidden{
+    display: none;
+  }
   .container {
     padding: 0 15px;
   }
